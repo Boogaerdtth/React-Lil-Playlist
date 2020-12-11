@@ -16,6 +16,7 @@ function SongList(props) {
                 <tbody>
                     <tr>
                         <th>
+
                             {props.songs.map(song =>
                                 <Song
                                     key={song.id}
@@ -24,12 +25,11 @@ function SongList(props) {
                                     genre={song.genre}
                                     rating={song.rating}
                                 />)}
+
                         </th>
                     </tr>
                 </tbody>
             </table>
-            <div>
-            </div>
         </div >
     )
 }
