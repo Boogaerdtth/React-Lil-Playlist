@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from "react-router-dom"
 
 function Nav() {
@@ -8,7 +7,7 @@ function Nav() {
             <nav>
                 <ul>
                     <li className="nav-link">
-                        <Link to="/Homepage">Homepage</Link>
+                        <Link to="/">Homepage</Link>
                     </li>
                     <li className="nav-link">
                         <Link to="/About">About</Link>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 function SongList(props) {
     return (
         <div className="list">
@@ -14,12 +12,12 @@ function SongList(props) {
                 </thead>
                 <tbody>
                     {props.songs.map((song, id) => (
-                        <tr key={id} className="list">
+                        <tr key={id} className="song">
                             <td>{song.title}</td>
                             <td>{song.artist}</td>
                             <td>{song.genre}</td>
                             <td>{song.rating}</td>
-                            {/* <td><button className="btnDelete" onClick={() => this.handleDelete(song._id)}></button></td> */}
+                            <td><button className="song-button" onClick={() => props.deleteSong(song.id)}>Delete</button></td>
                         </tr>
                     ))
                     }

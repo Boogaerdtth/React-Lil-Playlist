@@ -1,5 +1,3 @@
-import React from 'react'
-
 import SongOverview from './components/SongOverview'
 
 function Homepage() {
