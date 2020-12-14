@@ -3,8 +3,9 @@ import React from 'react'
 function About() {
     return (
         <div>
+            <h1>About</h1>
             <p>
-                srbgl;reog;gghdkjhfkjghkghfkhgkjfhgkhgkhg
+                This was a nice exercise
             </p>
 
         </div>
