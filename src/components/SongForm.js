@@ -1,5 +1,3 @@
-import React from 'react'
-
 function SongForm(props) {
     return (
         <div>
@@ -10,30 +8,35 @@ function SongForm(props) {
                     value={props.title}
                     placeholder="Titel"
                     onChange={props.handleChange}
-                    required></input>
+                    required
+                    class="inputfield"></input>
+
                 <input
                     type="text"
                     name='artist'
                     value={props.artist}
                     placeholder="Artiest"
                     onChange={props.handleChange}
-                    required></input>
+                    required
+                    class="inputfield"></input>
                 <select
                     value={props.genre}
                     name='genre'
                     onChange={props.handleChange}
-                    required>
+                    required
+                    class="inputfield">
                     <option value="">-- Choose a genre --</option>
                     <option value="Apres Ski">Apres Ski</option>
                     <option value="Techno">Techno</option>
-                    <option value="Lovesongs">Lovesongs</option>
+                    <option value="Lovesongs">Love Songs</option>
                     <option value="Hardrock">Hardrock</option>
                 </select>
                 <select
                     value={props.rating}
                     name='rating'
                     onChange={props.handleChange}
-                    required>
+                    required
+                    class="inputfield">
                     <option value="">-- Give a rating --</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -41,9 +44,9 @@ function SongForm(props) {
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <button>Voeg toe</button>
+                <button className="submit-button button">Voeg toe</button>
             </form>
-            <button onClick={props.emptyList}>Maak lijst leeg</button>
+            <button className="delete-all-button button" onClick={props.emptyList}>Maak lijst leeg</button>
         </div >
     )
 }

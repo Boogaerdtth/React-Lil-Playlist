@@ -3,14 +3,14 @@
 }
 
 .header{
-  color:whitesmoke;
-  background:black;
+  color:#CCCCCC;
+  background:#293136;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 20vh;
+  min-height: 10vh;
   font-size: 20px;
-  padding:60px;
+  padding:30px;
   border-top:0;
 }
 
@@ -33,4 +33,18 @@
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  color:#CCCCCC;
+
+}
+a:visited{
+  color:#CCCCCC;
+  padding:10px;
+  background: #445058;
+}
+.homepage{
+  background:#888888;
+
+}
+.header{
+  margin-bottom:0;
 }

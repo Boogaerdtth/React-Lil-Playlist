@@ -17,10 +17,20 @@ class SongOverview extends Component {
             rating: ""
         }
         this.emptyList = this.emptyList.bind(this)
+        this.deleteSong = this.deleteSong.bind(this)
+
     }
     emptyList = (event) => {
         event.preventDefault()
         this.setState({ songs: [] })
+    }
+
+    deleteSong = (id) => {
+        this.setState((prevState) => {
+            const newState = { ...prevState };
+            newState.songs = newState.songs.filter(song => song.id !== id);
+            return newState;
+        })
     }
 
     handleChange = event => {
@@ -45,7 +55,7 @@ class SongOverview extends Component {
             this.setState({ title: "", artist: "", genre: "", rating: "" })
         }
         return (
-            <div>
+            <div className="homepage">
                 <SongForm
                     addNewSong={addNewSong}
                     handleChange={this.handleChange}
@@ -55,11 +65,13 @@ class SongOverview extends Component {
                     artist={this.state.artist}
                     genre={this.state.genre}
                     rating={this.state.rating}
+                    deleteSong={this.deleteSong}
                 />
                 <SongList
                     songs={this.state.songs}
                     emptyList={this.emptyList}
                     addNewSong={addNewSong}
+                    deleteSong={this.deleteSong}
                 />
             </div >
         );
