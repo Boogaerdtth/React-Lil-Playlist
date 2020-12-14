@@ -1,13 +1,25 @@
 import './App.css';
 import './components/components.css'
-import SongOverview from './components/SongOverview';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+
+import Homepage from './Homepage'
+import About from './About'
+import Nav from './Nav'
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="title">Lil' Playlist</h1>
-      <SongOverview />
-    </div>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path="/About">
+          <About />
+        </Route>
+        <Route path="/Homepage">
+          <Homepage />
+        </Route>
+      </Switch>
+    </Router>
+
   );
 }
 

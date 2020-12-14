@@ -42,7 +42,7 @@ class SongOverview extends Component {
                 const newList = prevState.songs.concat(song)
                 return { songs: newList }
             })
-            this.setState({ title: " ", artist: "", genre: "", rating: "" })
+            this.setState({ title: "", artist: "", genre: "", rating: "" })
         }
         return (
             <div>

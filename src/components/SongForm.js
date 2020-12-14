@@ -24,10 +24,10 @@ function SongForm(props) {
                     onChange={props.handleChange}
                     required>
                     <option value="">-- Choose a genre --</option>
-                    <option value="apres ski">Apres Ski</option>
-                    <option value="techno">Techno</option>
-                    <option value="lovesongs">Lovesongs</option>
-                    <option value="hardrock">Hardrock</option>
+                    <option value="Apres Ski">Apres Ski</option>
+                    <option value="Techno">Techno</option>
+                    <option value="Lovesongs">Lovesongs</option>
+                    <option value="Hardrock">Hardrock</option>
                 </select>
                 <select
                     value={props.rating}
