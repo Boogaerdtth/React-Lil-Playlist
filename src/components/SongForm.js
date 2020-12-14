@@ -1,31 +1,28 @@
 import React from 'react'
 
 function SongForm(props) {
-    console.log(props)
     return (
         <div>
-            <form className="form" onSubmit={props.addNewSong} /*value={props.formFields}*/>
+            <form className="form" onSubmit={props.addNewSong}>
                 <input
                     type="text"
-                    name="title"
-                    value={props.songs.title}
+                    name='title'
+                    value={props.title}
                     placeholder="Titel"
                     onChange={props.handleChange}
                     required></input>
                 <input
                     type="text"
-                    name="artist"
-                    value={props.songs.artist}
+                    name='artist'
+                    value={props.artist}
                     placeholder="Artiest"
                     onChange={props.handleChange}
                     required></input>
-
                 <select
-                    value={props.songs.genre}
-                    name="genre"
+                    value={props.genre}
+                    name='genre'
                     onChange={props.handleChange}
-                    required
-                >
+                    required>
                     <option value="">-- Choose a genre --</option>
                     <option value="apres ski">Apres Ski</option>
                     <option value="techno">Techno</option>
@@ -33,23 +30,20 @@ function SongForm(props) {
                     <option value="hardrock">Hardrock</option>
                 </select>
                 <select
-                    value={props.songs.rating}
-                    name="rating"
+                    value={props.rating}
+                    name='rating'
                     onChange={props.handleChange}
-                    required
-                >
+                    required>
                     <option value="">-- Give a rating --</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-
                 </select>
                 <button>Voeg toe</button>
             </form>
             <button onClick={props.emptyList}>Maak lijst leeg</button>
-
         </div >
     )
 }

@@ -11,8 +11,11 @@ class SongOverview extends Component {
                 { id: 1, title: "Hello", artist: 'Lionel Richie', genre: 'Love songs', rating: 5 },
                 { id: 2, title: "Master of Puppets", artist: "Metallica", genre: "Hardrock", rating: 5 }
             ],
+            title: "",
+            artist: "",
+            genre: "",
+            rating: ""
         }
-        // this.handleSubmit = this.handleSubmit.bind(this)
         this.emptyList = this.emptyList.bind(this)
     }
     emptyList = (event) => {
@@ -20,25 +23,12 @@ class SongOverview extends Component {
         this.setState({ songs: [] })
     }
 
-    // addSong = (song) => {
-    //     // doe iets om de state aan te passen
-    // }
-
     handleChange = event => {
         const { name, value } = event.target
         this.setState({ [name]: value })
     }
 
-
-
-    // de submitbutton doet nog niks.
-    // aan de hand van sebas zn opdracht verder gaan maandag
-    // moet ik de waardes van de inputfields definieren in de Form component?
-    // of kan ik ze in de overview laten staan?
-    // zet m op!!!!
-
     render() {
-
         const addNewSong = event => {
             event.preventDefault()
             const song = {
@@ -52,37 +42,23 @@ class SongOverview extends Component {
                 const newList = prevState.songs.concat(song)
                 return { songs: newList }
             })
-            // this.setState({ this.state.title: " " }, { songs.artist: "" }, { songs.genre: "" }, { songs.rating: "" })
-            // })            
-            // this.setState({ songs: [...this.state.songs].concat([song]) })
-            // return { songs: newList }
+            this.setState({ title: " ", artist: "", genre: "", rating: "" })
         }
-
-        // const handleClickGroceryItem = event => {
-        //     const clickedItem = event.target.innerText
-        //     const currentShoppingList = this.state.shoppingListItems
-        //     const shoppingListItem = currentShoppingList.filter(
-        //         item => item.title === clickedItem)
-
-
-
-
-
-
         return (
             <div>
                 <SongForm
                     addNewSong={addNewSong}
                     handleChange={this.handleChange}
-                    setState={this.setState}
                     emptyList={this.emptyList}
                     songs={this.state.songs}
-                    handleSubmit={this.handleSubmit}
+                    title={this.state.title}
+                    artist={this.state.artist}
+                    genre={this.state.genre}
+                    rating={this.state.rating}
                 />
                 <SongList
                     songs={this.state.songs}
                     emptyList={this.emptyList}
-                    setState={this.setState}
                     addNewSong={addNewSong}
                 />
             </div >
