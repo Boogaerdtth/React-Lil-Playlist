@@ -1,10 +1,10 @@
 import React from 'react'
 
 function SongForm(props) {
-    // console.log(props)
+    console.log(props)
     return (
         <div>
-            <form className="form" onClick={props.handleSubmit} value={props.formFields}>
+            <form className="form" onSubmit={props.addNewSong} /*value={props.formFields}*/>
                 <input
                     type="text"
                     name="title"
